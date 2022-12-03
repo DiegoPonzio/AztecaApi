@@ -5,6 +5,7 @@ export default function ByCultura(req, res) {
     switch (req.method) {
         case "GET":
             const { id } = req.query
+            //console.log(id)
             if (id.length === 1) {
                 switch (id[0]) {
                     case "Cultura":
@@ -49,7 +50,7 @@ export default function ByCultura(req, res) {
                 }
             }
 
-            if (id.length === 2) {
+            if (id.length === 2 || id.length === 3) {
                 switch (id[0]) {
                     case "Cultura":
                         switch (id[1]) {
@@ -136,7 +137,7 @@ export default function ByCultura(req, res) {
                                         return res.status(200).json(
                                             {
                                                 message: "OK",
-                                                result: aztecas.edificaciones.templos[4],
+                                                result: aztecas.edificaciones.templos[3],
                                                 status: 200
                                             }
                                         )
