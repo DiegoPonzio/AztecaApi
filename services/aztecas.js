@@ -1,4 +1,6 @@
 import { leyenda1, leyenda2, leyenda3 } from "./Leyendas"
+//https://documenter.getpostman.com/view/24752969/2s8YzMXQYZ //api
+
 
 const aztecas = {
     cultura: {
