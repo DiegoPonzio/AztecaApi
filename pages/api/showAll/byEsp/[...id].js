@@ -104,13 +104,51 @@ export default function ByCultura(req, res) {
                     case "Edificaciones":
                         switch (id[1]) {
                             case "Templos":
-                                return res.status(200).json(
-                                    {
-                                        message: "OK",
-                                        result: aztecas.edificaciones.templos,
-                                        status: 200
-                                    }
-                                )
+                                switch (Number(id[2])) {
+                                    case 1:
+                                        return res.status(200).json(
+                                            {
+                                                message: "OK",
+                                                result: aztecas.edificaciones.templos[0],
+                                                status: 200
+                                            }
+                                        )
+
+                                    case 2:
+                                        return res.status(200).json(
+                                            {
+                                                message: "OK",
+                                                result: aztecas.edificaciones.templos[1],
+                                                status: 200
+                                            }
+                                        )
+
+                                    case 3:
+                                        return res.status(200).json(
+                                            {
+                                                message: "OK",
+                                                result: aztecas.edificaciones.templos[2],
+                                                status: 200
+                                            }
+                                        )
+
+                                    case 4:
+                                        return res.status(200).json(
+                                            {
+                                                message: "OK",
+                                                result: aztecas.edificaciones.templos[4],
+                                                status: 200
+                                            }
+                                        )
+
+                                    default:
+                                        return res.status(404).json(
+                                            {
+                                                message: "Error, not found",
+                                                status: 404
+                                            }
+                                        )
+                                }
                             default:
                                 return res.status(404).json(
                                     {
