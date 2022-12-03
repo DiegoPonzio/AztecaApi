@@ -24,7 +24,7 @@ export default function ByCultura(req, res) {
                                 status: 200
                             }
                         )
-                    case "Localización":
+                    case "Localizacion":
                         return res.status(200).json(
                             {
                                 message: "OK",
@@ -158,7 +158,7 @@ export default function ByCultura(req, res) {
                                     }
                                 )
                         }
-                    case "Localización":
+                    case "Localizacion":
                         switch (id[1]) {
                             case "link":
                                 return res.status(200).json(
